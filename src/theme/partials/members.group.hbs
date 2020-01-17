@@ -1,0 +1,17 @@
+{{#if categories}}
+{{#each categories}}
+<section class="tsd-member-group {{cssClasses}}">
+    <h2><span>{{math @index "+" 2}}</span> {{#if title}}{{title}} {{/if}}{{../title}}</h2>
+    {{#each children}}
+    {{> subMember}}
+    {{/each}}
+</section>
+{{/each}}
+{{else}}
+<section class="tsd-member-group {{cssClasses}}">
+    <h2><span>{{math @index "+" 2}}</span> {{title}}</h2>
+    {{#each children}}
+    {{> subMember}}
+    {{/each}}
+</section>
+{{/if}}

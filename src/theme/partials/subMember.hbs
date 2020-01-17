@@ -1,0 +1,37 @@
+<section style="page-break-inside:avoid;page-break-after:always;box-shadow:none;" id="{{#if name}}{{{name}}}{{/if}}"
+    class="tsd-panel tsd-member {{cssClasses}}">
+    <a name="{{anchor}}" class="tsd-anchor"></a>
+    {{#if name}}
+    <a name="{{name}}" class="tsd-anchor"></a>
+    <h3><span>{{math @index "+" 1}}</span> {{{wbr name}}} {{#each flags}}<span
+            class="tsd-flag ts-flag{{this}}">{{this}}</span>{{/each}}
+    </h3>
+    {{/if}}
+
+    {{#if signatures}}
+    {{> member.signatures}}
+    {{else}}
+    {{> member.declaration}}
+    {{/if}}
+
+{{#checkLength typeHierarchy 1}}
+    <h2>Hierarchy</h2>
+    {{#with typeHierarchy}}{{> hierarchy}}{{/with}}
+{{/checkLength}}
+
+    {{#unless isContainer}}
+        {{#checkLength groups 0}}
+            <h3>Members</h3>
+            {{#each groups}}
+                {{#each children}}
+                    {{> member}}
+                {{/each}}
+            {{/each}}
+        {{/checkLength}}
+    {{/unless}}
+</section>
+
+{{#if isContainer}}
+{{> index}}
+{{> members}}
+{{/if}}

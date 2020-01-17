@@ -1,0 +1,14 @@
+{{#if categories}}
+{{#each categories}}
+<section class="tsd-panel-group tsd-member-group {{cssClasses}}">
+    <h2>{{title}}</h2>
+    {{#each children}}
+    {{> member}}
+    {{/each}}
+</section>
+{{/each}}
+{{else}}
+{{#each groups}}
+{{> members.group}}
+{{/each}}
+{{/if}}

@@ -1,0 +1,30 @@
+{
+  "name": "typedoc-plugin-pdf-export",
+  "version": "0.0.1",
+  "description": "Typedoc plugin to export pdf",
+  "author": "Daniel Huth",
+  "repository": {
+    "url": "https://github.com/Agreon/typedoc-plugin-pdf-export"
+  },
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp -r src/theme dist/src/theme"
+  },
+  "keywords": [
+    "typedoc",
+    "pdf",
+    "plugin",
+    "typedocplugin"
+  ],
+  "dependencies": {
+    "puppeteer": "^1.20.0",
+    "typedoc": "^0.11.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
+}
