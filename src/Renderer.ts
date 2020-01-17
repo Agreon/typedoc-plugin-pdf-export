@@ -23,7 +23,7 @@ export class Renderer extends ContextAwareRendererComponent {
         const puppet = await browser.newPage();
         await puppet.setContent(page.contents);
         await puppet.pdf({
-          path: "hn.pdf",
+          path: "export.pdf",
           format: "A4",
           printBackground: true,
           margin: {
