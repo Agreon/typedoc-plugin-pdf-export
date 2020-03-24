@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-pdf-export",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typedoc plugin to export pdf",
   "author": "Daniel Huth",
   "repository": {
